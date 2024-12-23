@@ -1,0 +1,60 @@
+plugins {
+	id 'org.springframework.boot' version '3.3.0'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'blackboard.pattern'
+version = '0.0.1-SNAPSHOT'
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-logging'
+	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.6.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.6.0'
+
+	compileOnly 'org.projectlombok:lombok:1.18.34'
+ 	annotationProcessor 'org.projectlombok:lombok:1.18.34'
+
+	//implementation 'com.h2database:h2:'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.h2database:h2'
+	//runtimeOnly 'org.apache.derby:derby'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testCompileOnly 'org.projectlombok:lombok:1.18.34'
+ 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true // Optionally show standard output/error
+        exceptionFormat "full" // Optionally show full stack traces on failures
+
+        // Customize logging for each test case
+        afterTest { descriptor, result ->
+            println "Test ${descriptor.className}.${descriptor.name} ${result.resultType}"
+        }
+    }
+}
