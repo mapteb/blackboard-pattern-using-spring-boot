@@ -18,8 +18,21 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DeltaSpeedDataKS implements KnowledgeSource {
 
+     private final String name;
+     public DeltaSpeedDataKS(String name) {
+          this.name = name;
+     }
+     
      @Async
-     public void process(BlackBoardObject bbo) {          
-          log.info("==>> DeltaSpeedDataKS worker spawned {}", bbo.getClass());
+     public void process(BlackBoard bb, BlackBoardObject bbo) {          
+          // complete the task and update the bb
+          bbo.setResult("DeltaSpeedData analysis completed");
+          log.info(">> DeltaSpeedDataKS updating the BlackBoard {}", bbo.getResult());
+          bb.updateBlackBoard(bbo);
+     }
+
+     @Override
+     public String getName() {
+          return name;
      }
 }

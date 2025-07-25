@@ -1,8 +1,11 @@
 package blackboard.pattern.artifacts;
 
-public class DeltaSpeedDataBBO implements BlackBoardObject {
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-    public String getName() {
-        return "DeltaSpeedData";
-    }
+@Data
+@AllArgsConstructor
+public class DeltaSpeedDataBBO implements BlackBoardObject {
+    private String name;
+    private String result;
 }

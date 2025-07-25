@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import blackboard.pattern.artifacts.DeltaSpeedDataBBO;
-import blackboard.pattern.artifacts.DeltaSpeedDataKS;
 import blackboard.pattern.artifacts.FrontVehicleDataBBO;
-import blackboard.pattern.service.AutoNavBBOProcessor;
 import blackboard.pattern.service.AutoNavBlackBoard;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,8 +27,8 @@ public class BBAController {
 	@PostMapping(value="/bbp", produces=MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	public void triggerBBProcess() {
-		log.info(">> Adding BBOs to BB");
-		bb.submit(new DeltaSpeedDataBBO());
-		bb.submit(new FrontVehicleDataBBO());
+		log.info(">> Adding BlackBoardObjects to the Blackboard");
+		bb.addBlackBoardObject(new DeltaSpeedDataBBO("DeltaSpeedData", null));
+		bb.addBlackBoardObject(new FrontVehicleDataBBO("FrontVehicleData", null));		
 	}	
 }

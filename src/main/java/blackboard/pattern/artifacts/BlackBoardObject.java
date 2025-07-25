@@ -11,5 +11,7 @@ package blackboard.pattern.artifacts;
  */
 public interface BlackBoardObject {
      public String getName();
-
+     public void setName(String name);
+     public String getResult();
+     public void setResult(String result);
 }

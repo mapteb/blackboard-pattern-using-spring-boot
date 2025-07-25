@@ -18,8 +18,21 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FrontVehicleDataKS implements KnowledgeSource {
 
-     @Async
-     public void process(BlackBoardObject bbo) {          
-          log.info("==>> FrontVehicleDataKS worker spawned {}", bbo.getClass());
+     private final String name;
+     public FrontVehicleDataKS(String name) {
+          this.name = name;
      }
+
+     @Async
+     public void process(BlackBoard bb, BlackBoardObject bbo) {          
+          // complete the task and update the bb
+          bbo.setResult("FrontVehicleData analysis completed");
+          log.info(">> FrontVehicleDataKS updating the BlackBoard {}", bbo.getResult());
+          bb.updateBlackBoard(bbo);
+     }
+
+     @Override
+     public String getName() {
+          return name;
+     }     
 }

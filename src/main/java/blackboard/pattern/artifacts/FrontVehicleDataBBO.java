@@ -1,7 +1,11 @@
 package blackboard.pattern.artifacts;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class FrontVehicleDataBBO implements BlackBoardObject {
-    public String getName() {
-        return "FrontVehicleData";
-    }
+    private String name;
+    private String result;
 }

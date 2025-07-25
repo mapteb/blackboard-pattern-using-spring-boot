@@ -8,5 +8,6 @@ package blackboard.pattern.artifacts;
  *
  */
 public interface KnowledgeSource {
-     public void process(BlackBoardObject bbo);
+     public String getName();
+     public void process(BlackBoard bb, BlackBoardObject bbo);
 }

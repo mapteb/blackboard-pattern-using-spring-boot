@@ -1,27 +1,35 @@
 package blackboard.pattern.service;
 
-import java.util.concurrent.SubmissionPublisher;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
+import blackboard.pattern.artifacts.BlackBoard;
 import blackboard.pattern.artifacts.BlackBoardObject;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class AutoNavBlackBoard extends SubmissionPublisher<BlackBoardObject> { 
+public class AutoNavBlackBoard implements BlackBoard { 
 
-     // private final SubmissionPublisher<BlackBoardObject> publisher;
-     private final AutoNavBBOProcessor bboProcessor;
+     private final ApplicationEventPublisher eventPublisher;
+     private final List<BlackBoardObject> bbos;
 
-     public AutoNavBlackBoard(AutoNavBBOProcessor bboProcessor) {
-          this.bboProcessor = bboProcessor;
-          // this.publisher = new SubmissionPublisher<>();
-          // publisher.subscribe(bboProcessor);
+     public AutoNavBlackBoard(ApplicationEventPublisher eventPublisher) {
+          this.eventPublisher = eventPublisher;
+          this.bbos = Collections.synchronizedList(new ArrayList<>());
      }
 
      public void addBlackBoardObject(BlackBoardObject bbo) {
-          log.info(">> bbo submitted to processor: {}", bbo.getClass().getTypeName());
-          // publisher.submit(bbo);
+          BlackBoardEvent event = new BlackBoardEvent(this, bbo);
+          eventPublisher.publishEvent(event);
+     }
+
+     public void updateBlackBoard(BlackBoardObject bbo) {
+          bbos.stream().filter(bo -> bo.getName().equals(bbo.getName()))
+               .forEach(bo -> bo.setResult(bbo.getResult()));
      }
 }
