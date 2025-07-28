@@ -42,6 +42,15 @@ The Swagger UI can be accessed using http://localhost:8080/swagger-ui/index.html
 &gt;&gt; Launching KnowledgeSource as a worker thread: FrontVehicleData<br>
 &gt;&gt; FrontVehicleDataKS updating the BlackBoard FrontVehicleData analysis completed<br>
 
+
+### Docker build and run
+
+docker build --build-arg JAR_FILE=build/libs/\*.jar -t blackboard-pattern-using-spring-boot .<br>
+docker run -p 8080:8080 blackboard-pattern-using-spring-boot
+
+
 ### TBD
 
+
 Add an AutoNavVehicleController that listens to the list of completed BlackBoardObjects, when received analyzes and executes a vehicle action (like breaking, speeding, etc.)
+
