@@ -45,8 +45,14 @@ The Swagger UI can be accessed using http://localhost:8080/swagger-ui/index.html
 
 ### Docker build and run
 
+.\gradlew build
+
 docker build --build-arg JAR_FILE=build/libs/\*.jar -t blackboard-pattern-using-spring-boot .<br>
 docker run -p 8080:8080 blackboard-pattern-using-spring-boot
+
+or
+
+docker-compose up --build
 
 
 ### TBD
