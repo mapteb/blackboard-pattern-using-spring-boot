@@ -2,12 +2,14 @@
 
 This project implements the [Blackboard Design Pattern](https://en.wikipedia.org/wiki/Blackboard_(design_pattern)) using Spring Boot. A fictitious autonav scenario is considered in this POC project. The BlackBoard receives data from multiple vehicle sensors and is required to react based on the actions performed by the KnowledgeSources on the BlackBoardObjects.
 
+
 ### Blackboard Components
 
 The Blackboard design pattern involves three components - 
 1. BlackBoard - holds a list of BlackBoardObjects, publishes events when BlackBoardObjects are added
 2. BBController - holds a list of KnowledgeSources, listens to the events published by the blackboard, when a BlackBoardObject is received assigns it to an eligible KnowledgeSource and launches it as a worker thread.
 3. KnowledgeSource - acts on the assigned BlackBoardObject, when completed updates the BlackBoard with the completed object
+
 
 ### How it works
 
@@ -18,6 +20,7 @@ The following steps are involved:
 3. The BBController, upon receiving the blackboard objects, spawns KnowledgeSource worker threads that can handle the BlackBoardObjects.<br>
 4. The KnowledgeSources update the BlackBoard with their completed BlackBoardObjects
 5. The final step of reacting to the analyzed data is not considered in this POC.
+
 
 ### Use Cases
 
@@ -41,6 +44,11 @@ The Swagger UI can be accessed using http://localhost:8080/swagger-ui/index.html
 &gt;&gt; Received BlackBoardObject: FrontVehicleData<br>
 &gt;&gt; Launching KnowledgeSource as a worker thread: FrontVehicleData<br>
 &gt;&gt; FrontVehicleDataKS updating the BlackBoard FrontVehicleData analysis completed<br>
+
+
+### Docker build and run
+
+docker compose up --build
 
 
 ### TBD
