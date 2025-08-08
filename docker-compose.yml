@@ -1,0 +1,9 @@
+
+services:
+  blackboard-pattern-app: 
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080
+
