@@ -8,7 +8,7 @@ This project implements the [Blackboard Design Pattern](https://en.wikipedia.org
 The Blackboard design pattern involves three components - 
 1. BlackBoard - holds a list of BlackBoardObjects, publishes events when BlackBoardObjects are added
 2. BBController - holds a list of KnowledgeSources, listens to the events published by the blackboard, when a BlackBoardObject is received assigns it to an eligible KnowledgeSource and launches it as a worker thread.
-3. KnowledgeSource - acts on the assigned BlackBoardObject, when completed updates the BlackBoard with the completed object
+3. KnowledgeSource - (could be an AI Agent) acts on the assigned BlackBoardObject, when completed updates the BlackBoard with the completed object
 
 
 ### How it works
