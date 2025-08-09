@@ -1,6 +1,6 @@
 ## README
 
-This project implements the [Blackboard Design Pattern](https://en.wikipedia.org/wiki/Blackboard_(design_pattern)) using Spring Boot. A fictitious autonav scenario is considered in this POC project. The BlackBoard receives data from multiple vehicle sensors and is required to react based on the actions performed by the KnowledgeSources on the BlackBoardObjects.
+This project implements the [Blackboard Design Pattern](https://en.wikipedia.org/wiki/Blackboard_(design_pattern)) using Spring Boot. A fictitious autonav scenario is considered in this POC project. The BlackBoard receives data from multiple vehicle sensors and is required to react based on the actions performed by the KnowledgeSources (AI Agents) on the BlackBoardObjects.
 
 
 ### Blackboard Components
