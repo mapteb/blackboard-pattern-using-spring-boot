@@ -7,9 +7,9 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import blackboard.pattern.artifacts.DeltaSpeedDataKS;
-import blackboard.pattern.artifacts.FrontVehicleDataKS;
-import blackboard.pattern.artifacts.KnowledgeSource;
+import blackboard.pattern.core.DeltaSpeedDataKS;
+import blackboard.pattern.core.FrontVehicleDataKS;
+import blackboard.pattern.core.KnowledgeSource;
 import blackboard.pattern.service.AutoNavBBController;
 import lombok.extern.slf4j.Slf4j;
 

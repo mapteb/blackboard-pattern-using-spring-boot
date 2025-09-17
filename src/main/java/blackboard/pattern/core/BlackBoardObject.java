@@ -1,4 +1,4 @@
-package blackboard.pattern.artifacts;
+package blackboard.pattern.core;
 
 /**
  * The BlackBoardObject is the basic unit of data that is added to the BlackBoard

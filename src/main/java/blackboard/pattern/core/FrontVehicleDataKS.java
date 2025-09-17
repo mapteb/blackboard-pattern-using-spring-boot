@@ -1,4 +1,4 @@
-package blackboard.pattern.artifacts;
+package blackboard.pattern.core;
 
 import org.springframework.scheduling.annotation.Async;
 
@@ -16,23 +16,23 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
-public class DeltaSpeedDataKS implements KnowledgeSource {
+public class FrontVehicleDataKS implements KnowledgeSource {
 
      private final String name;
-     public DeltaSpeedDataKS(String name) {
+     public FrontVehicleDataKS(String name) {
           this.name = name;
      }
-     
+
      @Async
      public void process(BlackBoard bb, BlackBoardObject bbo) {          
           // complete the task and update the bb
-          bbo.setResult("DeltaSpeedData analysis completed");
-          log.info(">> DeltaSpeedDataKS updating the BlackBoard {}", bbo.getResult());
+          bbo.setResult("FrontVehicleData analysis completed");
+          log.info(">> FrontVehicleDataKS updating the BlackBoard {}", bbo.getResult());
           bb.updateBlackBoard(bbo);
      }
 
      @Override
      public String getName() {
           return name;
-     }
+     }     
 }

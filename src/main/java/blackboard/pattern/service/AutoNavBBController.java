@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
-import blackboard.pattern.artifacts.BlackBoard;
-import blackboard.pattern.artifacts.BlackBoardController;
-import blackboard.pattern.artifacts.BlackBoardObject;
-import blackboard.pattern.artifacts.KnowledgeSource;
+import blackboard.pattern.core.BlackBoard;
+import blackboard.pattern.core.BlackBoardController;
+import blackboard.pattern.core.BlackBoardObject;
+import blackboard.pattern.core.KnowledgeSource;
 import lombok.extern.slf4j.Slf4j;
 
 /**

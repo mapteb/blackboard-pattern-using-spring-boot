@@ -1,4 +1,4 @@
-package blackboard.pattern.artifacts;
+package blackboard.pattern.core;
 
 import java.util.List;
 

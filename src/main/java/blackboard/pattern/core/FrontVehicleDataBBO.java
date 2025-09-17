@@ -1,4 +1,4 @@
-package blackboard.pattern.artifacts;
+package blackboard.pattern.core;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package blackboard.pattern.artifacts;
+package blackboard.pattern.core;
 
 public interface BlackBoard {
     public void addBlackBoardObject(BlackBoardObject bbo);

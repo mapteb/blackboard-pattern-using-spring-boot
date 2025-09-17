@@ -2,7 +2,7 @@ package blackboard.pattern.service;
 
 import org.springframework.context.ApplicationEvent;
 
-import blackboard.pattern.artifacts.BlackBoardObject;
+import blackboard.pattern.core.BlackBoardObject;
 
 import org.springframework.context.ApplicationEvent;
 

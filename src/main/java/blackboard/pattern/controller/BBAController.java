@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import blackboard.pattern.artifacts.DeltaSpeedDataBBO;
-import blackboard.pattern.artifacts.FrontVehicleDataBBO;
+import blackboard.pattern.core.DeltaSpeedDataBBO;
+import blackboard.pattern.core.FrontVehicleDataBBO;
 import blackboard.pattern.service.AutoNavBlackBoard;
 import lombok.extern.slf4j.Slf4j;
 
