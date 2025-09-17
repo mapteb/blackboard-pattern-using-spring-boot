@@ -1,4 +1,4 @@
-package blackboard.pattern.core;
+package pattern.blackboard.core;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,8 +1,8 @@
-package blackboard.pattern.service;
+package pattern.blackboard.service;
 
 import org.springframework.context.ApplicationEvent;
 
-import blackboard.pattern.core.BlackBoardObject;
+import pattern.blackboard.core.BlackBoardObject;
 
 import org.springframework.context.ApplicationEvent;
 

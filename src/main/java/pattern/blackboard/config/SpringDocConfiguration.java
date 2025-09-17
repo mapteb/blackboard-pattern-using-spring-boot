@@ -1,4 +1,4 @@
-package blackboard.pattern.config;
+package pattern.blackboard.config;
 
 import java.util.*;
 import org.springdoc.core.customizers.ServerBaseUrlCustomizer;

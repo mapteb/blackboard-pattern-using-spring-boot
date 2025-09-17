@@ -1,4 +1,4 @@
-package blackboard.pattern.core;
+package pattern.blackboard.core;
 
 /**
  * The BlackBoardObject is the basic unit of data that is added to the BlackBoard

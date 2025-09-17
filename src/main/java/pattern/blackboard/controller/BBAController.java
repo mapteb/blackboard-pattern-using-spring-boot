@@ -1,4 +1,4 @@
-package blackboard.pattern.controller;
+package pattern.blackboard.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import blackboard.pattern.core.DeltaSpeedDataBBO;
-import blackboard.pattern.core.FrontVehicleDataBBO;
-import blackboard.pattern.service.AutoNavBlackBoard;
 import lombok.extern.slf4j.Slf4j;
+import pattern.blackboard.core.DeltaSpeedDataBBO;
+import pattern.blackboard.core.FrontVehicleDataBBO;
+import pattern.blackboard.service.AutoNavBlackBoard;
 
 
 @Slf4j

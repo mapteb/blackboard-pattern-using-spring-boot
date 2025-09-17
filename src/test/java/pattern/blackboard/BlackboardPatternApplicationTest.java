@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package blackboard.pattern;
+package pattern.blackboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

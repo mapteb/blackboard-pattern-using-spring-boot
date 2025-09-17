@@ -1,4 +1,4 @@
-package blackboard.pattern.service;
+package pattern.blackboard.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,11 +6,11 @@ import java.util.List;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
-import blackboard.pattern.core.BlackBoard;
-import blackboard.pattern.core.BlackBoardController;
-import blackboard.pattern.core.BlackBoardObject;
-import blackboard.pattern.core.KnowledgeSource;
 import lombok.extern.slf4j.Slf4j;
+import pattern.blackboard.core.BlackBoard;
+import pattern.blackboard.core.BlackBoardController;
+import pattern.blackboard.core.BlackBoardObject;
+import pattern.blackboard.core.KnowledgeSource;
 
 /**
  * This blackboard controller gets notified when one or

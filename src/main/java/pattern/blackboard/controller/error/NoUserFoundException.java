@@ -1,4 +1,4 @@
-package blackboard.pattern.controller.error;
+package pattern.blackboard.controller.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
