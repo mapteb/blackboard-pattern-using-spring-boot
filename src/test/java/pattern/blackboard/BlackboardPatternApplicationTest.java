@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class BlackboardPatternApplicationTest {
+class BlackboardPatternApplicationTest {
 
 	@Test
 	void contextLoads() {

@@ -34,7 +34,9 @@ Some use cases for this application could be
 
 To run the application locally, run '.\gradlew bootRun'
 
-The Swagger UI can be accessed using http://localhost:8080/swagger-ui/index.html and the POST api /api/bbp can be accessed to trigger the blackboard process. The following application logs can be observed:
+Run <br>
+curl -X POST "http://localhost:8080/api/bbp" -v <br>
+to trigger the blackboard process. The following application logs can be observed:
 
 &gt;&gt; Configuring AutoNavBBController with KnowledgeSources<br>
 &gt;&gt; Adding BlackBoardObjects to the Blackboard<br>
@@ -44,11 +46,6 @@ The Swagger UI can be accessed using http://localhost:8080/swagger-ui/index.html
 &gt;&gt; Received BlackBoardObject: FrontVehicleData<br>
 &gt;&gt; Launching KnowledgeSource as a worker thread: FrontVehicleData<br>
 &gt;&gt; FrontVehicleDataKS updating the BlackBoard FrontVehicleData analysis completed<br>
-
-
-### Docker build and run
-
-docker compose up --build
 
 
 ### TBD
